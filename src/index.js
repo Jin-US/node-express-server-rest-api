@@ -30,7 +30,7 @@ app.use('/users', routes.user);
 app.use('/messages', routes.message);
 
 // Start
-
-app.listen(process.env.PORT, () =>
-  console.log(`Example app listening on port ${process.env.PORT}!`),
-);
+ const port = process.env.PORT || 8080;
+ app.listen(port, () => {
+      console.log('Hello world listening on port', port);
+}); 
